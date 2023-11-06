@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>topdf</title>
+    <style>
+         *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  place-items: center;
+  background-image: url("edit_23.jpg");
+  background: cover;
+  display: grid;
+}
+
+.container {
+  width: 35%;
+  height: auto;
+  padding: 10px;
+  background-color: rgb(206, 124, 70);
+  box-shadow: 0 0 5px  5px rgb(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.container h1 {
+  text-align: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: capitalize;
+  margin: 5px 0;
+}
+.view_img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 5px;
+}
+.view_img img {
+  width: 400px;
+  height: 360px;
+  object-fit: contain;
+}
+.choose_img ,.btn_contain{
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 10px;
+}
+.disabled .view_img{
+    pointer-events: none;
+    opacity: .5;
+}
+.choose_img button ,.save{
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 25px;
+  border: none;
+  outline: none;
+  background-color: rgb(250, 174, 112);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.choose_img button img {
+  width: 35px;
+}
+    </style>
+</head>
+<body>
+    <div class="container disabled">
+        <h1>pdf converter </h1>
+        <hr />
+        <div class="view_img">
+          <img src="one (2).png" alt="" />
+        </div>
+  
+        <div class="choose_img">
+            <input type="file" name="" id="" onchange="
+                abhi();
+                
+                " accept="image/*" hidden />
+          <button onclick="
+          thik();
+            ">choose Image <img src="images/upload.png" alt="" /></button>
+          
+        </div>
+  
+       
+       
+       
+  
+        <div class="btn_contain">
+          
+          <button   onclick="topdf()" class="save"  >save in pdf</button>
+        </div>
+      </div>
+      <!-- src="js/script.js" -->
+      <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+      
+      <script >
+           let viewimg=document.querySelector('.choose_img input');
+           let ans;
+           function thik(){
+            viewimg.click();
+           }
+           function abhi(){
+             let lr=viewimg.files[0];
+          let setimg=document.querySelector('.view_img img');
+          setimg.src = URL.createObjectURL(lr);
+          let yr=document.querySelector('.container').classList.remove("disabled");
+          ans=document.createElement('img');
+          ans.src=URL.createObjectURL(lr);
+           }
+            
+           function topdf()
+           {
+              console.log(ans);
+              let doc = new jsPDF();
+              doc.addImage(ans, 10, 10);
+              doc.save('.toprf.pdf');
+           }
+           
+          
+      </script>
+    
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>loginpage</title>
+    <Style>
+          *{
+            margin: 0px;
+            padding: 0px;
+          }
+          body{
+            background-color: rgb(83, 60, 60);
+            background-image: url("login_back - Copy.jpg");
+            background-size:cover;
+            
+          }
+            #login{
+                background-color: rgb(188, 202, 202);
+                background: transparent;
+                box-shadow: 0px 0px 5px 8px ;
+                border: 2px solid black;
+                width: 40%;
+                margin:10% 30%;
+                border-radius: 5px;
+               /* border: 5px solid black; */
+            }
+            h1{
+              text-align: center;
+              
+            }
+            input{
+                margin: 2%;
+                width: 40%;
+                /* padding: 4%; */
+                font-size: large;
+            }
+            #info{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+            }
+            #enter{
+                width: 12%;
+                padding: 1%;
+                background-color: blue;
+            }
+            hr{
+                padding: 0.1%;
+                width: 95%;
+                background-color: rgb(255, 0, 0);
+                color: black;
+                margin-top: 1%;
+            }
+            #create{
+                background-color: green;
+                padding: 1%;
+                margin-top: 2%;
+                text-decoration: none;
+                color: black;
+                font-weight: 400;
+            }
+            #language{
+                margin-top: 8%;
+                margin-bottom: 16%;
+               
+                
+            }
+            
+           
+    </Style>
+</head>
+<body>
+    <div id="login">
+        <!-- <button id="cancel">X</button> -->
+           <h1>LOGIN</h1>
+           <div id="info">
+            <div><h3 >Email</h3>
+           <input  style="width: 300px; margin-left: 0px;" id="email" type="email" placeholder="Email">
+            </div>
+
+            <div>
+                <h3>password</h3>
+                <input   style="width: 300px; margin-left: 0px;" id="password" type="password" placeholder="Password"></div>
+            
+           
+           <button id="enter" onclick="
+           let re=document.querySelector(`#email`);
+           if(isdefind(re.value))
+           {
+            let pa=document.querySelector(`#password`);
+            let ew=localStorage.getItem(re.value);
+            if(ew===pa.value)
+            {
+                  location.href='/Ecommerce/editersystem/mainlogin.html';
+                  
+            }
+            else
+            {
+                    printerror();
+            }
+           }
+           else
+           {printerror();}
+           " >Login</button>
+           <button   onclick=" location.href='/Ecommerce/editersystem/forgrt.html';" style="background: transparent; border: none; margin-top: 5px;" >Forget password?</button>
+           <hr>
+           
+           <a id="create" href="http://127.0.0.1:5500/Ecommerce/editersystem/create.html">Create new id</a>
+           <div id="language">
+           <h4>English(US)</h4>
+           <h4>Bisaya</h4>
+           <h4>Portues(Brasil)</h4>
+           <h4>Filpino</h4>
+           <h4>Espanol</h4>
+           </div>
+           </div>
+    </div>
+    <script>
+        function isdefind(lo)
+        {   
+            if(localStorage.getItem(lo)!==undefined)
+            return true;
+            else
+            return false;
+        }
+       
+        function printerror()
+        {
+              alert(`invalid email or passward `);
+        }
+        function printsahi()
+        {
+              alert(`sab kuch sahi chal raha hai `);
+        }
+    </script>
+</body>
+</html>

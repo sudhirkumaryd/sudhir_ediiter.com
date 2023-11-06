@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+           
+        }
+        body{
+            background-image: url("home_back.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #header{
+           
+           
+           background: transparent;
+           font-size:90px;
+           font-weight: 900;
+           color: wheat;
+           text-shadow: 6px 6px 4px red;
+
+           display: flex; 
+           width: 100%;
+           height: 20%;
+          margin-bottom: 40px;
+           justify-content: center;
+           align-items: center;
+       }
+        #nav_first, #nav_second{
+            background-color: rgb(98, 165, 165);
+            background: transparent;
+            width: 70%;
+            display: flex;
+            /* padding: 6px; */
+            
+        }
+        #nav a{
+            text-decoration: none;
+            margin-left: 15px;
+            margin-right: 15px;
+            padding: 6px;
+            font-weight: 600;
+           color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+       
+        #nav a:hover{
+            background-color: brown;
+           
+            border-radius: 5px;
+        }
+        #nav_second{
+            
+            width: 30%;
+            
+            justify-content: end;
+        }
+        
+        #nav{
+            display: flex;
+        }
+        #sign{
+            background-color: green;
+            border-radius: 5px;
+           
+            
+        }
+        #body_part {
+            
+            background-image: url("body_part.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+         
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            
+        }
+        
+        #image_size{
+                     width: 250px;
+                     height: 250px;
+                     margin: 10px;
+                     border-radius: 20px;
+        }
+        #image_size:hover{
+            transform: scale(1.1);
+             
+        }
+        
+        #fir_f ,#fir_s{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        #footer_first{
+            width:20% ;
+        }
+        #footer{
+            display: flex;
+            justify-content: center;
+           background-color: darkgray;
+           padding: 100px;
+        }
+        h3{
+            padding: 4px;
+            font-size: small;
+        }
+        h1{
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="hole_mid">
+
+   
+    <div id="header">
+        
+        EDITER SYSTEM
+    
+    </div>
+    
+    <div id="nav">
+        <div id="nav_first" class="dis">
+            <a  href="index.html">HOME</a>
+            <a  href="homepage.html">EDIT</a>
+            <a  href="#">SPLIT PDF</a>
+            <a  href="#">RSIZE</a>
+        </div>
+        <div id="nav_second">
+            <a href="loginpage.html">LOGIN</a>
+            <a id="sign" href="create.html">SIGNUP</a>
+        </div>
+    </div>
+    <div id="body_part"   class="dis">
+        <div id="fir_f">
+            <div id="inner_part">  <a href="homepage.html"><img id="image_size" src="edit.jpeg" alt=""></a>  
+                             <p style="display: flex; justify-content: center; font-size:x-large;" >IMAGE EDIT</p>
+            
+            </div>
+            <div id="inner_par"><a href="homepage.html"><img id="image_size" src="edit_2.jpg" alt=""></a> 
+                <p style="display: flex; justify-content: center; font-size:x-large;" >IMAGE EDIT</p></div>
+        </div>
+        <div id="fir_s">
+        
+        <div id="inner_part"><a href="pdf.html"><img id="image_size" src="jpg-to-pdf-1.png" alt=""></a>
+            <p style="display: flex; justify-content: center; font-size:x-large;" >SPLIT PDF</p>
+        </div>
+        <div id="inner_par"><a href="#"><img id="image_size" src="resize-image.png" alt=""></a>
+            <p style="display: flex; justify-content: center; font-size:x-large;" >IMAGE RE-SIZE </p>
+        </div>
+    </div>
+  </div>
+  <hr style="padding: 0px; background-color: rgb(0, 0, 0); margin-top: 5px;" >
+  <div id="footer">
+    <div id="footer_first">
+        <h1>Features</h1>
+        <h3>jpg to pdf</h3>
+        <h3>edit jpg</h3>
+        <h3>re-size jpg</h3>
+    </div>
+    <div id="footer_first">
+        <h1>Explore</h1>
+        <h3>Design ideas</h3>
+        <h3>custom point</h3>
+        <h3>color</h3>
+        <h3>Blog</h3>
+        <h3>Apps</h3>
+    </div>
+    <div id="footer_first">
+        <h1>Dowland</h1>
+        <h3>IOS</h3>
+        <h3>Mac</h3>
+        <h3>Windows</h3>
+        <h3>Android</h3>
+        <h3>Apps</h3>
+    </div>
+    <div id="footer_first">
+        <h1>About</h1>
+        <h3>Trust Center</h3>
+        <h3>Security </h3>
+        <h3>Careers</h3>
+        <h3>Contect sales</h3>
+        <h3>Terms & policy</h3>
+    </div>
+
+  </div>
+  <div id="last">
+    <div id="copy" style=" display: flex; justify-content: center;  background-color: darkgray; align-items: center;">&#169 2023 All Rights Reserved</div>
+    
+  </div>
+</div>
+</body>
+</html>
