@@ -8,13 +8,16 @@
             padding: 0px;
           }
           body{
-            background-color: rgb(98, 105, 176);
-            
-            
+           background-color: rgb(98, 105, 176);
+          
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 567px;
           }
-            #login{
+           #login{  
+                /* background: transparent; */
                 background-image: url("login.jpg");
-                opecity:0.8;
                 background-size:cover;
                 background-repeat:no-repeat;
                 box-shadow: 0px 0px 5px 8px rgb(71, 71, 167);
@@ -25,24 +28,35 @@
                /* border: 5px solid black; */
             }
             h1{
-              text-align: center;
-              
+               text-align: center;
             }
             input{
                 margin: 2%;
                 width: 40%;
                 /* padding: 4%; */
+                border-radius: 4px;
+                padding: 4px;
                 font-size: large;
+            }
+            #cr{
+              display: flex;
+              justify-content: center;
+              align-items: center;  
+              margin-top: 20px;
             }
             #info{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                
+                font-size: large;
             }
             #enter{
-                width: 12%;
-                padding: 1%;
+                margin: 2%;
+                width: 308px;
+                /* padding: 4%; */
+                border-radius: 4px;
+                padding: 4px;
+                font-size: large;
                 background-color: blue;
             }
             hr{
@@ -53,9 +67,9 @@
                 margin-top: 1%;
             }
             #create{
-                background-color: green;
-                padding: 1%;
-                margin-top: 2%;
+                background:transparent;
+                
+                border: none;
                 text-decoration: none;
                 color: black;
                 font-weight: 400;
@@ -63,10 +77,13 @@
             #language{
                 margin-top: 8%;
                 margin-bottom: 16%;
-               
-                
             }
-            
+            @media  (max-width : 600px) {
+                #login{
+                      background-color: aqua;
+                      margin-top: 30px;
+               }
+            }          
            
     </Style>
 </head>
@@ -105,8 +122,11 @@
            " >Login</button>
            <button   onclick=" location.href='forgrt.html';" style="background: transparent; border: none; margin-top: 5px;" >Forget password?</button>
            <hr>
+           <div  id="cr">
+            <span>Don't have account?</span>
+           <a id="create" href="create.html">REGISTER</a>
+           </div>
            
-           <a id="create" href="create.html">Create new id</a>
            <div id="language">
            <h4>English(US)</h4>
            <h4>Bisaya</h4>
@@ -127,11 +147,11 @@
        
         function printerror()
         {
-              alert(`invalid email or passward `);
+              alert(`invalid email or passward`);
         }
         function printsahi()
         {
-              alert(`sab kuch sahi chal raha hai `);
+              alert(`sab kuch sahi chal raha hai`);
         }
     </script>
 </body>
